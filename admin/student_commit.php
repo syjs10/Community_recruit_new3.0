@@ -17,9 +17,8 @@
 			$department1 = $_POST['department1'];
 			$department2 = $_POST['department2'];
 			$department3 = $_POST['department3'];
-			$introduction = $_POST['introduction'];
-			$verify   = $_POST['verify'];
-		      $verify1  = $_SESSION['verify'];
+
+
 			if (!$name || !$gender || !$class || !$phonenum || !$qqnum || !$department || !$introduction){
 				echo "请填全注册信息";
 				exit;
@@ -34,13 +33,9 @@
 				$department1 = mysql_real_escape_string($_POST['department1']);
 				$department2 = mysql_real_escape_string($_POST['department2']);
 				$department3 = mysql_real_escape_string($_POST['department3']);
-				$introduction = mysql_real_escape_string($_POST['introduction']);
-				$verify   = mysql_real_escape_string($_POST['verify']);
+
 			}
-			if($verify != $verify1){
-				alertMes('验证码错误', 'student.html');
-				exit;
-			}
+			
 			@ $db = new mysqli('localhost', 'student', 'student123', 'student');
 			if(mysqli_connect_errno()){
 				echo 'Error: Could not connect to database. Please try again.';

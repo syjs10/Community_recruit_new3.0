@@ -27,7 +27,7 @@
       }
       //添加管理员
       function addAdmin(){
-            $arr = $_POST;
+            $arr = htmlentities($_POST);
             $arr['password'] = md5($_POST['password']);
             if (insert("admin", $arr)) {
                   $mes = '添加成功!</br><a href= "addAdmin.php">继续添加</a>|<a href="listAdmin.php">查看管理员</a>';
@@ -45,7 +45,8 @@
 
       //编辑管理员
       function editAdmin($id) {
-            $arr = $_POST;
+            $id = htmlentities($id);
+            $arr = htmlentities($_POST);
             $arr['password'] = md5($_POST['password']);
             if (update("admin", $arr, "id = {$id} ")) {
                   $mes = '编辑成功!<a href="listAdmin.php">查看管理员</a>';
@@ -56,6 +57,7 @@
       }
       //删除管理员
       function delAdmin($id){
+            $id = htmlentities($id);
             if (delete("admin", "id={$id}")) {
                   $mes = '删除成功!<a href="listAdmin.php">查看管理员</a>';
             } else {
@@ -63,5 +65,5 @@
             }
             return $mes;
       }
-      
+
 ?>

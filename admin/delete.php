@@ -6,9 +6,9 @@
 	</head>
 	<body>
 		<?php
-			$id = $_POST['id'];
-			$department = $_POST['department'];
-			@ $db = new mysqli('localhost', 'student', 'student123', 'student');
+			$id = htmlentities($_POST['id']);
+			$department = htmlentities($_POST['department']);
+			$db = new mysqli('localhost', 'student', 'student123', 'student');
 			if (mysqli_connect_errno()) {
 				echo "Error: Could not connect database.";
 			}

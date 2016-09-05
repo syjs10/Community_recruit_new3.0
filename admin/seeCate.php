@@ -74,9 +74,13 @@
                         </td>
                         <td>
                               <?php
-                              $dep=htmlspecialchars(stripslashes($row['employ_department']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department']));
-                              $dep1=htmlspecialchars(stripslashes($row['employ_department1']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department1']));
-                              $dep2=htmlspecialchars(stripslashes($row['employ_department2']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department2'])); $dep3=htmlspecialchars(stripslashes($row['employ_department3']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department3']));
+                              $dep=htmlspecialchars(stripslashes($row['employ_department']))=="NULL"?
+                              " ":htmlspecialchars(stripslashes($row['employ_department']));
+                              $dep1=htmlspecialchars(stripslashes($row['employ_department1']))=="NULL"?
+                              " ":htmlspecialchars(stripslashes($row['employ_department1']));
+                              $dep2=htmlspecialchars(stripslashes($row['employ_department2']))=="NULL"?
+                              " ":htmlspecialchars(stripslashes($row['employ_department2'])); $dep3=htmlspecialchars(stripslashes($row['employ_department3']))=="NULL"?
+                              " ":htmlspecialchars(stripslashes($row['employ_department3']));
                               echo $dep.$dep1.$dep2.$dep3;
                               ?>
                         </td>

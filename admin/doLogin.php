@@ -1,11 +1,11 @@
 <?php
       header('Content-type:utf-8');
       require_once '../include.php';
-      $username = $_POST['username'];
-      $password = md5($_POST['password']);
-      $verify   = $_POST['verify'];
-      $verify1  = $_SESSION['verify'];
-      $sutoflag = $_POST['autoflag'];
+      $username = htmlentities($_POST['username']);
+      $password = md5(htmlentities($_POST['password']));
+      $verify   = htmlentities($_POST['verify']);
+      $verify1  = htmlentities($_SESSION['verify']);
+      $sutoflag = htmlentities($_POST['autoflag']);
       if ($verify == $verify1) {
             $sql = "select * from admin where username = '{$username}' and password = '{$password}'";
             $row = checkAdmin($sql);
