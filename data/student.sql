@@ -5,6 +5,7 @@ create table student
 	id int unsigned not null auto_increment primary key,
 	name char (10) not null,
 	gender char (4) not null,
+	studentid char (15) not null,
 	class char (50) not null,
 	phonenum char (11) not null,
 	qqnum char (15) not null,

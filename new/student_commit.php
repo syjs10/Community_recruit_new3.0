@@ -10,6 +10,7 @@
 		 	//create short variable name
 			$name = $_POST['name'];
 			$gender = $_POST['gender'];
+			$studentid = $_POST['studentid'];
 			$class = $_POST['class'];
 			$phonenum = $_POST['phonenum'];
 			$qqnum = $_POST['qqnum'];
@@ -26,6 +27,7 @@
 			}
 			if (!get_magic_quotes_gpc()){
 				$name = mysql_real_escape_string($_POST['name']);
+				$studentid = mysql_real_escape_string($_POST['studentid']);
 				$gender = mysql_real_escape_string($_POST['gender']);
 				$class = mysql_real_escape_string($_POST['class']);
 				$phonenum = mysql_real_escape_string($_POST['phonenum']);
@@ -48,7 +50,7 @@
 			}
 			$db->query("SET NAMES 'UTF8'");
 			$query = "insert into student values(
-					'NULL','".$name."', '".$gender."', '".$class."', '".
+					'NULL','".$name."', '".$gender."', '".$studentid."', '".$class."', '".
 					$phonenum."', '".$qqnum."', '".$department."', '".
 					$department1."', '".$department2."', '".$department1.
 					"', '".$introduction."', 'NULL','NULL','NULL','NULL')";

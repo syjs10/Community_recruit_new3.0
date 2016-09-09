@@ -27,7 +27,7 @@ foreach ($rows as $row) {
       if($count < 3){
             continue;
       }
-      echo $row['id']."\t".$row['name']."\t".$row['gender']."\t".$row['class']."\t".$row['phonenum']."\t".$row['qqnum']."\t\n";
+      echo $row['studentid']."\t".$row['name']."\t".$row['gender']."\t".$row['class']."\t".$row['phonenum']."\t".$row['qqnum']."\t\n";
 }
 
 ?>
