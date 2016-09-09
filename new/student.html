@@ -5,47 +5,62 @@
 	<meta charset="utf-8">
 	<title>招新页面</title>
 	<style media="screen">
+	body{
+		background:url(../images/hkh.jpg) no-repeat;
+		background-size: 100% 100%;
+	}
 		form {
 			margin-top: 3%;
-			margin-left: 15%;
+			margin-left: -7%;
 			margin-bottom: 3%;
 			margin-right: 5%;
+			height:90%;
 		}
 
 		.form {
-			margin-left: 13%;
-			width: 68%;
+			margin-top: 5%;
+			margin-left: 23%;
+			width: 50%;
 			padding-left: 7%;
 			padding-right: -6%;
-			border: 1px solid #ccc;
-			background-color: rgba(191, 191, 191, 0.44);
+			border: 0px solid #ccc;
+			box-shadow: 0px 0px 20px #000;
+			background-color: transparent;;
 		}
 
 		td {
 			font-size: 20px;
+			color:#fff;
+
 		}
 
 		input {
-			height: 25px;
+			height: 30px;
 			right: 5px;
+
+
 		}
 
 		.input {
-			color: #555;
+			background-color: transparent;
+			width: 100%;
 			border-radius: 3px;
 			padding: 3px 0px 3px 5px;
-			border: 1px solid #e5e5e5;
-			background: #faf5f5;
+			border: 0px solid #e5e5e5;
+			border-bottom: 1px solid #fff;
 			line-height: 15px;
 			outline: 0;
-			-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
-			box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+			/*-webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+			box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);*/
 		}
 
 		textarea {
 			width: 300px;
+			margin-top: 5px;
+			border: 1px solid #fff !important;
 			border-radius: 3px;
-			box-shadow: 1px 1px 1px #B6B6B6;
+			height: 100%;
+
 		}
 
 		.title {
@@ -53,32 +68,32 @@
 			font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
 			padding: 20px 0px 15px 20px;
 			display: block;
-			color: #FFF;
-			background: #b0ee4c;
-			text-shadow: 1px 1px 1px #949494;
+			color: #fff;
+			background-color: transparent;
+			text-shadow: 1px 2px 5px #949494;
 			border-radius: 5px 5px 0px 0px;
 			-webkit-border-radius: 5px 5px 0px 0px;
 			-moz-border-radius: 5px 5px 0px 0px;
-			border-bottom: 1px solid #89AF4C;
+
 		}
 
 		select {
-			color: #555;
+			background-color: transparent;
 			height: 30px;
 			line-height: 15px;
 			padding: 0px 0px 0px 10px;
 			margin-top: 2px;
-			border: 1px solid #E5E5E5;
-			background: #FBFBFB;
+			border: 0px;
+			border-bottom: 1px solid #E5E5E5;
+
 			outline: 0;
-			-webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
-			box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
-			font: normal 14px/14px Arial, Helvetica, sans-serif;
+
+			font: normal 14px 14px Arial, Helvetica, sans-serif;
 		}
 
 		.submit {
 			margin-top: 3%;
-			margin-left: 30%;
+			margin-left: 37%;
 			height: 35px;
 			width: 100px;
 			background: #E27575;
@@ -96,6 +111,9 @@
 			margin-left: 0;
 			height: 13px;
 		}
+		.td_a{
+			border: 2px solid #fff;
+		}
 	</style>
 </head>
 
@@ -104,24 +122,24 @@
 
 	<div class="form">
 		<div class="title">
-			<h1 align="center">网管招新报名表</h1>
+			<h1 align="center">工大网管，欢迎“家”入</h1>
 		</div>
 		<form action="student_commit.php" enctype="multipart/form-data" method="post">
 			<table border="0">
 				<tr>
-					<td>姓名：</td>
+					<td class = "td_a">姓名：</td>
 					<td>
 						<input class="input" type="text" name="name" maxlength="4" size="25">
 					</td>
 				</tr>
 				<tr>
-					<td>学号：</td>
+					<td class = "td_a">学号：</td>
 					<td>
-						<input class="input" type="text" name="studentid" maxlength="4" size="25">
+						<input class="input" type="text" name="studentid" maxlength="9" size="25">
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "td_a">
 						性别：
 					</td>
 					<td>
@@ -131,25 +149,25 @@
 					</td>
 				</tr>
 				<tr>
-					<td>专业班级：</td>
+					<td class = "td_a">专业班级：</td>
 					<td>
 						<input class="input" type="text" name="class" maxlength="30" size="25">
 					</td>
 				</tr>
 				<tr>
-					<td>手机：</td>
+					<td class = "td_a">手机：</td>
 					<td>
 						<input class="input" type="text" name="phonenum" maxlength="11" size="25">
 					</td>
 				</tr>
 				<tr>
-					<td>QQ:</td>
+					<td class = "td_a">QQ:</td>
 					<td>
 						<input class="input" type="text" name="qqnum" maxlength="15" size="25">
 					</td>
 				</tr>
 				<tr>
-					<td>部门:</td>
+					<td class = "td_a">部门:</td>
 					<td>
 						<select class="" name="department">
 								<option value="NULL">  </option>
@@ -191,7 +209,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "td_a">
 						上传照片：
 					</td>
 					<td>
@@ -199,7 +217,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "td_a">
 						自我介绍<br>（包括特长爱好）：
 					</td>
 					<td>
@@ -207,19 +225,20 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td class = "td_a">
 						验证码
 					</td>
 					<td>
 
-						<input type="text" class="input"name="verify" value="">
-						<br>
-						<img src="getVerify.php" alt="" style="margin-top:10px;"/>
+						<input type="text" class="input"name="verify" value="" style="width:50%; margin-bottom:17px;">
+
+						<img src="getVerify.php" alt="" style="margin-top:10px; height:85%; position: relative;  bottom:-10px;"/>
 
 					</td>
 				</tr>
 			</table>
 			<input type="submit" value="提  交" class="submit">
+			<br><br>
 		</form>
 	</div>
 
